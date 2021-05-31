@@ -5,16 +5,13 @@ var answerB = document.getElementById('b');
 var answerC = document.getElementById('c');
 var answerD = document.getElementById('d');
 var inner_bar = document.getElementById('inner-bar') ;
-//ar userAns = document.getElementsByClassName('ans'); 
 
 var next = document.getElementById('next');
 var submit = document.getElementById('submit');
 
 submit.style.opacity = 0;
 inner_bar.style.width = "33%";
-//p.innerHTML = "hi";
 var maxques = 3;
-//question.innerHTML = "hey how are you";
 
 const myQuestions = [
     {
@@ -48,18 +45,10 @@ const myQuestions = [
       correctAnswer: "d"
     }
   ];
-  //question.innerHTML = myQuestions[0]["question"];
- 
-
-// answerA.addEventListener('click',function (){
-//   answerA.innerHTML = "You clicked";
-// })
 var ques = 0;
 var score = 0;
 
 function displayQuiz(ques){
-  // submit.style.opacity = 0;
-  // next.style.opacity = 1;
   answerA.style.backgroundColor = "oldlace";
   answerB.style.backgroundColor = "oldlace";
   answerC.style.backgroundColor = "oldlace";
@@ -75,8 +64,6 @@ function displayQuiz(ques){
   answerB.innerHTML = myQuestions[ques]["answers"]["b"];
   answerC.innerHTML = myQuestions[ques]["answers"]["c"];
   answerD.innerHTML = myQuestions[ques]["answers"]["d"];
-
-
 }
 
 displayQuiz(ques);
@@ -89,8 +76,6 @@ function checkAnswers(value){
 }
 
 answerA.addEventListener('click',function(){
- // answerA.style.backgroundColor = "yellow";
- // answerA.innerHTML = "You clicked";
   if(checkAnswers("a")){
     answerA.style.color = "white";
     answerA.style.backgroundColor = "green";
@@ -102,8 +87,6 @@ answerA.addEventListener('click',function(){
 });
 
 answerB.addEventListener('click',function(){
-  // answerA.style.backgroundColor = "yellow";
-  // answerA.innerHTML = "You clicked";
    if(checkAnswers("b")){
      answerB.style.color = "white";
      answerB.style.backgroundColor = "green";
@@ -115,8 +98,6 @@ answerB.addEventListener('click',function(){
  });
 
  answerC.addEventListener('click',function(){
-  // answerA.style.backgroundColor = "yellow";
-  // answerA.innerHTML = "You clicked";
    if(checkAnswers("c")){
      answerC.style.color = "white";
      answerC.style.backgroundColor = "green";
@@ -128,8 +109,6 @@ answerB.addEventListener('click',function(){
  });
 
  answerD.addEventListener('click',function(){
-  // answerA.style.backgroundColor = "yellow";
-  // answerA.innerHTML = "You clicked";
    if(checkAnswers("d")){
      answerD.style.color = "white";
      answerD.style.backgroundColor = "green";
@@ -141,7 +120,6 @@ answerB.addEventListener('click',function(){
  });
 
  function nextFunction(){
-    //alert("Hey you clicked next");
     ques++;
     
     if(ques===1){
@@ -160,10 +138,7 @@ answerB.addEventListener('click',function(){
       next.style.opacity = 0;
       submit.style.opacity = 1;
       submit.style.cursor = "pointer";
-      //addSubmit();
-      //next.removeEventListener('click');
     }    
-    //if()
   
 
 }
@@ -179,9 +154,6 @@ function addSubmit(){
 
 function submitFun(){
   alert('You scored ' + (score*10) + " in the quiz.\n" + "Press the button to restart.");
- // ques = 0;
- // score = 20;
-  //submit.removeEventListener('click');
   submit.style.opacity = 0;
   submit.style.cursor = "context-menu";
   next.style.opacity = 1;
